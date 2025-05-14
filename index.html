@@ -3,7 +3,93 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="shortcut icon" href="public/cal.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Calculator || Application</title>
   </head>
-  <body></body>
+  <body>
+    <div
+      class="d-flex flex-column gap-5 justify-content-center align-items-center vh-100"
+    >
+      <h1 class="text-center pt-5">Basic Calculator</h1>
+      <div class="d-grid justify-content-center">
+        <div class="card shadow-sm" style="width: 40rem">
+          <div class="card-body d-grid gap-3 container">
+            <div class="row row-cols-2 g-3">
+              <div class="">
+                <input
+                  id="inp1"
+                  type="number"
+                  placeholder="Enter your number-1"
+                  class="w-100 p-2 rounded-3 form-control fs-4 fw-medium"
+                />
+              </div>
+              <div class="">
+                <input
+                  id="inp2"
+                  type="number"
+                  placeholder="Enter your number-2"
+                  class="w-100 p-2 rounded-3 form-control fs-4 fw-medium"
+                />
+              </div>
+            </div>
+            <input
+              value=""
+              class="card p-3 text-center fs-4 fw-medium"
+              id="display"
+              disabled
+              placeholder=" Total Calculation"
+            />
+
+            <!-- <h5 class="card p-3 text-center container" id="display">
+              Total Calculation
+            </h5> -->
+
+            <div class="row row-cols-4 g-4">
+              <div class="">
+                <button
+                  onclick="addNumber()"
+                  class="w-100 p-2 rounded-2 btn btn-primary fs-5 fw-medium"
+                >
+                  +
+                </button>
+              </div>
+              <div class="">
+                <button
+                  onclick="minus()"
+                  class="w-100 p-2 rounded-2 btn btn-secondary fs-5 fw-medium"
+                >
+                  -
+                </button>
+              </div>
+              <div class="">
+                <button
+                  onclick="multiply()"
+                  class="w-100 p-2 rounded-2 btn btn-success fs-5 fw-medium"
+                >
+                  x
+                </button>
+              </div>
+              <div class="">
+                <button
+                  onclick="divide()"
+                  class="w-100 p-2 rounded-2 btn btn-info fs-5 fw-medium"
+                >
+                  /
+                </button>
+              </div>
+            </div>
+            <button
+              class="w-100 p-2 rounded-2 btn btn-danger"
+              onclick="allClear()"
+            >
+              Clear
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/app.js"></script>
+  </body>
 </html>
